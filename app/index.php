@@ -27,7 +27,7 @@
     $correo = $_POST['correo'];
     $mensaje = $_POST['mensaje'];
 
-    $stmt = $pdo->prepare('INSERT INTO mensajes (numero_identificacion, nombre, correo, mensaje) VALUES (?, ?, ?)');
+    $stmt = $pdo->prepare('INSERT INTO mensajes (numero_identificacion, nombre, correo, mensaje) VALUES (?, ?, ?, ?)');
     $stmt->execute([$numero_identificacion,$nombre, $correo, $mensaje]);
 
     echo "<p class='ok'>Mensaje guardado correctamente ✅</p>";
@@ -35,13 +35,13 @@
 
   $result = $pdo->query('SELECT * FROM mensajes ORDER BY fecha DESC')->fetchAll();
   if ($result) {
-    echo "<h3>Mensajes registrados:</h3><table><tr><th>Nombre</th><th>Correo</th><th>Mensaje</th><th>Fecha</th></tr>";
+    echo "<h3>Mensajes registrados:</h3><table><tr><th>Numero De Identificacion</th><th>Nombre</th><th>Correo</th><th>Mensaje</th><th>Fecha</th></tr>";
     foreach ($result as $row) {
       echo "<tr><td>{$row['numero_identificacion']}</td><td>{$row['nombre']}</td><td>{$row['correo']}</td><td>{$row['mensaje']}</td><td>{$row['fecha']}</td></tr>";
     }
     echo "</table>";
   }
   ?>
-  <footer>© 2025 | Curso Arquitectura Cloud - Grupo 16</footer>
+  <footer>© 2025 | Curso Arquitectura Cloud - Grupo 16 | 10.7.25-1</footer>
 </body>
 </html>
