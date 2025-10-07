@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  background:linear-gradient(174deg,rgba(106, 106, 115, 1) 0%, rgba(9, 9, 121, 1) 28%, rgba(8, 88, 137, 1) 38%, rgba(0, 212, 255, 1) 76%);
   color: white;
   display: flex;
   flex-direction: column;
@@ -10,7 +10,7 @@ body {
   margin: 0;
   padding: 20px;
 }
-h1 { color: #00d4ff; }
+h1 { color: #88848F; }
 input, textarea {
   width: 300px;
   margin: 5px;
