@@ -1,0 +1,32 @@
+# Directorios de Docker
+.docker/
+mysql_data/
+
+# Archivos subidos
+app/uploads/*
+!app/uploads/.gitkeep
+
+# Variables de entorno sensibles (opcional, ya tienes .env en el repo)
+# .env
+
+# Logs
+*.log
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Backups
+*.sql.backup
+backup*.sql
+
+# Temporary files
+*.tmp
+*.temp
