@@ -1,20 +1,14 @@
 <?php
 $host = 'db';
-$db   = 'appdb';
-$user = 'appuser';
-$pass = 'AppPass123!';
-$charset = 'utf8mb4';
-
-$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
-$options = [
-    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-];
+$dbname = 'appdb';
+$username = 'appuser';
+$password = 'app123';
 
 try {
-    $pdo = new PDO($dsn, $user, $pass, $options);
+    $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
-    echo 'Error de conexión: ' . $e->getMessage();
+    echo "Error de conexión: " . $e->getMessage();
     exit;
 }
 ?>
